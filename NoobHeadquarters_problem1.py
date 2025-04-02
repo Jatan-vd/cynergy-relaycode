@@ -1,11 +1,14 @@
-m = int(input("Enter m "))
-n = int(input("Enter n "))
+m = int(input("Enter m: "))
+n = int(input("Enter n: "))
 a = []
 count = 1
+
 for i in range(n):
-    a.append(input("Enter grids"))
-for i in range(1,m):
-    for j in range(n):
+    row = list(map(int, input().split()))
+    a.append(row)
+    row = []
+for i in range(n):
+    for j in range(m):
         
         if a[i][j] == 1:
             if i == m-1:
@@ -17,7 +20,8 @@ for i in range(1,m):
                 break
             else:
                 count += 1
-                
+
+        
 print(count)
         
 
